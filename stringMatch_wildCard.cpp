@@ -8,34 +8,38 @@ ofstream output;	//to write output a file
 
 void match(string text,string pattern)
 {
-	int len_text= text.length();		//length of text string
-	int len_pattern= pattern.length();	//length of pattern string
+	int len_text= text.length();		
+	int len_pattern= pattern.length();	
 	
 	cout<<"\n Positions of text \""<<text<<"\" , where pattern \""<<pattern<<"\" is found:\n";
+	
 	//write output to output file
 	output<<"\n Positions of text \""<<text<<"\" , where pattern \""<<pattern<<"\" is found:\n";
 
-	int i,j,flag=0;				//flag for identify whether pattern is found at lease once
+	int i,j,flag=0;		//flag for identify whether pattern is found at lease once
 	
-	if(pattern==""){			//if pattern is null 
+	//if pattern is null 
+	if(pattern==""){			
 		cout<<"\n\t---Pattern is empty. Nothing to find in Text---\n";
 		output<<"\n\t---Pattern is empty. Nothing to find in Text---\n";
 	}
-	//if pattern is not null	
+	//if pattern is not null neive string matching start	
 	else{
-		for(i=0;i<=len_text-len_pattern;i++){			//start check the pattern from each position in text
+		for(i=0;i<=len_text-len_pattern;i++){	
 		
-			for(j=0;j<len_pattern;j++){			//check pattern in text from start position
+			for(j=0;j<len_pattern;j++){		
 			
-				if(pattern[j]!=text[i+j] && pattern[j]!='_')	//if (j+1) th position of pattern is underscore or equal to (i+j+1)th position of text inner
-					break;					//loop exucute. Overwise exit from it.
-											
+				//if (j+1) th position of pattern is not underscore or
+				//not equal to (i+j+1)th position of text 
+				if(pattern[j]!=text[i+j] && pattern[j]!='_')	
+					break;					
 			}
 			
 			//if pattern found in (i+1)th position in text
 			if(j==len_pattern){
-				cout<<"\n\t"<<i+1<<" - \'"<<text.substr(i,len_pattern)<<"\'\n"; 	//print position and pattern in text
-													
+				
+				//print position and pattern in text
+				cout<<"\n\t"<<i+1<<" - \'"<<text.substr(i,len_pattern)<<"\'\n"; 
 				output<<"\n\t"<<i+1<<" - \'"<<text.substr(i,len_pattern)<<"\'\n";
 				
 				flag=1;			//found pattern once
@@ -64,19 +68,19 @@ int main(){
 	string pattern,text,outfile;	//declare to store user pattern and text string
 	bool run=true;
 	int i=1;
-	int no=6;					//6 test cases
+	int no=6;		//6 test cases
 	char con;
 	
 	do{
 		cout<<"\n ---------------------TEST CASE "<<i<<"------------------------";
-		text=fileread("Test/Text/text",i);					//read i th text file
-		pattern=fileread("Test/Pattern/pattern",i);				//read i th pattern file
+		text=fileread("Test/Text/text",i);				//read i th text file
+		pattern=fileread("Test/Pattern/pattern",i);			//read i th pattern file
 		
-		outfile= "Test/Output/patternmatch" + to_string(i) + ".output";		//prepare file name to write output
-		output.open(outfile.c_str());						//open output file
+		outfile= "Test/Output/patternmatch" + to_string(i) + ".output";	//prepare file name to write output
+		output.open(outfile.c_str());					//open output file
 	
-		match(text,pattern);							//search pattern in text
-		output.close();								//close output file
+		match(text,pattern);						//search pattern in text
+		output.close();							//close output file
 	
 		i++;
 		
@@ -87,7 +91,7 @@ int main(){
 				run=false;
 		}
 			
-	}while(run && i<=no);
+	}while(run && i<=no);		//loop if user want continue and have test case to run
 	
 	return 0;
 }
