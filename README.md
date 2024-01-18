@@ -109,7 +109,7 @@ I am a Full Stack Developer <img src="https://media.giphy.com/media/WUlplcMpOCEm
   
   [![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Risini1998&count_private=true&show_icons=true&theme=dark&background=000000)](https://github.com/Risini1998)
 
-  [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Risini1998&layout=compact&theme=vision-friendly-dark)](https://github.com/Risini1998/github-readme-stats)
+  [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Risini1998&layout=compact&theme=vision-friendly-dark)](https://github.com/Risini1998)
 </div>
 
 <!--Contribution Graph-->
