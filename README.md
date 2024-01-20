@@ -122,3 +122,4 @@ I am a Full Stack Developer <img src="https://media.giphy.com/media/WUlplcMpOCEm
 
 ### :writing_hand: Blog Posts :
 - [How to Improve Google’s Core Web Vitals Metrics for SEO](https://medium.com/@risinipiyathma1998/how-to-improve-googles-core-web-vitals-metrics-for-seo-0dcc730a6f6a)
+- [Upload Plugin Configuration to store media in Cloudinary folder-wise in Strapi v4](https://medium.com/@risinipiyathma1998/upload-plugin-configuration-to-store-media-in-cloudinary-folder-wise-in-strapi-v4-e0d494f10c9c)
